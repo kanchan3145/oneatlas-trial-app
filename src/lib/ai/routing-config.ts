@@ -1,11 +1,11 @@
 export const routingConfig = {
   intent: {
-    primary: { provider: "gemini", model: "gemini-2.0-flash" }
+    primary: { provider: "groq", model: "llama-3.1-8b-instant" }
   },
   schema: {
-    primary: { provider: "gemini", model: "gemini-2.0-flash" }
+    primary: { provider: "groq", model: "llama-3.3-70b-versatile" }
   },
   appspec: {
-    primary: { provider: "gemini", model: "gemini-2.0-flash" }
+    primary: { provider: "groq", model: "llama-3.3-70b-versatile" }
   }
 };

@@ -13,13 +13,14 @@ export async function POST(req: NextRequest) {
     }
 
     const result = await runPipeline(body.prompt);
-
     return NextResponse.json(result);
   } catch (error) {
+    console.error("API GENERATE ERROR:", error);
+
     return NextResponse.json(
       {
         success: false,
-        error: error instanceof Error ? error.message : "Unknown error"
+        error: error instanceof Error ? error.message : JSON.stringify(error)
       },
       { status: 500 }
     );
